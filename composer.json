@@ -1,0 +1,23 @@
+{
+    "name": "nswindlight/jumei",
+    "description": "聚美开放平台Api",
+    "keywords": ["聚美", "api"],
+    "homepage": "https://github.com/nswindlight/jumei",
+    "type": "extension",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "shengjie",
+            "email": "nswindlight@163.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/nswindlight/jumei/issues",
+        "wiki": "https://github.com/nswindlight/jumei/wiki",
+        "source": "https://github.com/nswindlight/jumei"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.6.0"
+    }
+}
