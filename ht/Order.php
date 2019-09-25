@@ -55,6 +55,6 @@ class Order extends Common {
     }
 
     public function getExternalBatchNosForMerchant(){
-        
+
     }
 }

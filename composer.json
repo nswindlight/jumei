@@ -16,7 +16,6 @@
         "wiki": "https://github.com/nswindlight/jumei/wiki",
         "source": "https://github.com/nswindlight/jumei"
     },
-    "minimum-stability": "stable",
     "require": {
         "php": ">=5.6.0"
     }
