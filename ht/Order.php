@@ -13,6 +13,9 @@ class Order extends Common {
      */
     public function getOrderIds($param){
         if(empty($param['status'])) return false;
+        $default = ['start_date'=>'','end_date'=>'','shipping_system_id'=>''];
+        $param = array_merge($default,$param);
+
         $param['client_id'] = $this->client_id;
         $param['client_key'] = $this->client_key;
         $param['sign'] = $this->generateSign($param);
@@ -47,6 +50,9 @@ class Order extends Common {
     }
     public function getUndisposedOrder($param){
         if(empty($param['curr_time'])) return false;
+        $default = ['page'=>'','page_size'=>''];
+        $param = array_merge($default,$param);
+
         $param['client_id'] = $this->client_id;
         $param['client_key'] = $this->client_key;
         $param['sign'] = $this->generateSign($param);
@@ -56,5 +62,16 @@ class Order extends Common {
 
     public function getExternalBatchNosForMerchant(){
 
+    }
+
+    public function getLogistics($logistic_name = ''){
+        $param = [];
+        $param['logistic_name'] = $logistic_name;
+        $param['client_id'] = $this->client_id;
+        $param['client_key'] = $this->client_key;
+
+        $param['sign'] = $this->generateSign($param);
+        $url = self::apiUrl .'/HtOrder/GetLogistics?'. http_build_query($param);
+        return $this-> curl($url);
     }
 }
